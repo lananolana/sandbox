@@ -2,3 +2,4 @@
 .vscode
 build
 qaseio.lock
+app/tests/__pycache__
