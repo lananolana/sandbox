@@ -10,6 +10,7 @@ def calculate_distance(point1, point2):
 
     return math.sqrt((delta_x ** 2) + (delta_y ** 2))
 
+
 def get_mid_point(point1, point2):
     """
     Search a point midway between two specified points
@@ -20,6 +21,7 @@ def get_mid_point(point1, point2):
     }
 
     return middle_point
+
 
 def make_decart_point(x, y):
     return {"x": x, "y": y}
