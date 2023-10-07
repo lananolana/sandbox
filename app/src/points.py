@@ -65,3 +65,22 @@ def convert_y_to_decart(point):
     Converting y coordinate from polar to decart system
     """
     return get_radius(point) * math.sin(get_angle(point))
+
+
+def get_quadrant(point):
+    """
+    Determining the quadrant in which a point is located
+    """
+    x = get_x(point)
+    y = get_y(point)
+
+    if x > 0 and y > 0:
+        return 1
+    if x < 0 < y:
+        return 2
+    if x < 0 and y < 0:
+        return 3
+    if y < 0 < x:
+        return 4
+
+    return None
