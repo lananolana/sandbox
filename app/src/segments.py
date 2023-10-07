@@ -1,4 +1,4 @@
-from points import get_x, get_y, make_decart_point
+from points import *
 
 
 def make_segment(point1, point2):
@@ -33,3 +33,17 @@ def get_mid_point_of_segment(segment):
     y = (get_y(begin_point) + get_y(end_point)) / 2
 
     return make_decart_point(x, y)
+
+
+def is_parallel_with_x(segment):
+    begin_point = get_begin_point(segment)
+    end_point = get_end_point(segment)
+
+    return convert_y_to_decart(begin_point) == convert_y_to_decart(end_point)
+
+
+def is_parallel_with_y(segment):
+    begin_point = get_begin_point(segment)
+    end_point = get_end_point(segment)
+
+    return convert_x_to_decart(begin_point) == convert_x_to_decart(end_point)

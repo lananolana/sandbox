@@ -23,6 +23,24 @@ def get_mid_point(point1, point2):
     return middle_point
 
 
+def make_point(x, y):
+    """
+    Converting Cartesian system coordinates to polar
+    """
+    return {
+        "angle": math.atan2(y, x),
+        "radius": math.sqrt((x ** 2) + (y ** 2)),
+    }
+
+
+def get_angle(point):
+    return point["angle"]
+
+
+def get_radius(point):
+    return point["radius"]
+
+
 def make_decart_point(x, y):
     return {"x": x, "y": y}
 
@@ -33,3 +51,17 @@ def get_x(point):
 
 def get_y(point):
     return point["y"]
+
+
+def convert_x_to_decart(point):
+    """
+    Converting x coordinate from polar to decart system
+    """
+    return get_radius(point) * math.cos(get_angle(point))
+
+
+def convert_y_to_decart(point):
+    """
+    Converting y coordinate from polar to decart system
+    """
+    return get_radius(point) * math.sin(get_angle(point))
