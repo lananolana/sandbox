@@ -1,5 +1,13 @@
 from src.points import make_point
-from src.segments import *
+from src.segments import (
+    make_decart_point,
+    get_begin_point,
+    get_end_point,
+    make_segment,
+    get_mid_point_of_segment,
+    is_parallel_with_y,
+    is_parallel_with_x
+    )
 
 
 def test_segments():
